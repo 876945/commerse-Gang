@@ -1,0 +1,221 @@
+/* ---------------- General Reset ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------- Auth Container (Login / Signup) ---------------- */
+.auth-container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.auth-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #f6d365;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background: #fda085;
+}
+
+.messages {
+    margin-bottom: 15px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.auth-container a {
+    color: #f6d365;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+.auth-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ---------------- Main Container / Feed ---------------- */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #333;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* ---------------- Feed / Posts ---------------- */
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.post-media {
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.view-btn:hover {
+    background-color: #1e7e34;
+}
+
+.file-link {
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: #ffc107;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.file-link:hover {
+    background-color: #e0a800;
+}
+
+/* ---------------- Form Card (Create Post) ---------------- */
+.form-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* ---------------- No Posts Message ---------------- */
+.no-posts {
+    text-align: center;
+    color: #888;
+    margin-top: 50px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+    .auth-container, .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .card, .form-card {
+        padding: 15px;
+    }
+
+    .auth-container button, .btn-submit {
+        font-size: 16px;
+    }
+}

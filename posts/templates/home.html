@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Commerse Gang</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Commerse Gang</h1>
+            <a class="btn" href="/create/">Create New Post</a>
+        </header>
+
+        <div class="feed">
+            {% for post in posts %}
+                <div class="card">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.description }}</p>
+
+                    {% if post.photo %}
+                        <img src="{{ post.photo.url }}" class="post-media">
+                    {% endif %}
+
+                    {% if post.video %}
+                        <video class="post-media" controls>
+                            <source src="{{ post.video.url }}">
+                        </video>
+                    {% endif %}
+
+                    {% if post.file %}
+                        <p><a class="file-link" href="{{ post.file.url }}" download>Download File</a></p>
+                    {% endif %}
+
+                    <a href="/post/{{ post.id }}/" class="view-btn">View Details</a>
+                </div>
+            {% empty %}
+                <p class="no-posts">No posts yet. Be the first to post!</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
