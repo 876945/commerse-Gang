@@ -8,11 +8,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-id66x$jus4duxxf@ipsxpla*fu**2**faa&dl19&_n62#g2%^x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # Change to False in production
+DEBUG = False  # Change to False for production
 
 # Add your Render app URL or custom domain here
-ALLOWED_HOSTS = ['your-app-name.onrender.com', 'localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = ['commerse-gang.onrender.com']
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -60,7 +59,7 @@ WSGI_APPLICATION = 'commerse_gang.wsgi.application'
 # Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # Use Postgres in production for heavy apps
+        'ENGINE': 'django.db.backends.sqlite3',  # For simple apps; switch to Postgres in production for bigger apps
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
